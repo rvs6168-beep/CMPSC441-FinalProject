@@ -12,7 +12,7 @@ This use case is included by both `Handle Combat Encounter` and `Handle Social E
 
 # What We Did
 
-I connected the `roll_dice` tool from the MCP server to the LangGraph ReAct agent, allowing the Dungeon Master AI to call it automatically during play. When the player takes an action that requires a roll, such as attacking an enemy or making a skill check, the agent calls `roll_dice` silently, receives the numeric result, and uses it as input to `calculate_damage` before narrating the outcome. In theory.
+I connected the `roll_dice` tool from the MCP server to the LangGraph ReAct agent, allowing the Dungeon Master AI to call it automatically during play. When the player takes an action that requires a roll, such as attacking an enemy or making a skill check, the agent calls `roll_dice` silently, receives the numeric result, and uses it as input to `calculate_damage` before narrating the outcome.
 
 In reality the agent still occasionally screws up the roll call. However, this will be fixed as development continues for `Handle Combat Encounter` and `Handle Social Encounter`.
 

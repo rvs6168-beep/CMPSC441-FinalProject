@@ -296,5 +296,4 @@ mcp.run(transport="stdio")
 if __name__ == "__main__":
     print("Building DnD knowledge base...")
     collection = build_vector_store()
-    print("Knowledge base ready.\n")
     asyncio.run(run_agent(collection))
