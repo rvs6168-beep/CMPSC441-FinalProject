@@ -13,6 +13,8 @@ from mcp.client.stdio import stdio_client
 import threading
 import time
 import sys
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 MODEL = "llama3.1:8b"
 EMBED_MODEL = "nomic-embed-text"
@@ -197,11 +199,8 @@ You also have access to retrieved DnD rules context which will be prepended to r
 
 async def run_agent(collection: chromadb.Collection):
     print("=" * 60)
-    print("  DnD AI DUNGEON MASTER")
-    print("  Powered by: Ollama + RAG + Pydantic + MCP + LangGraph")
-    print("  Type /exit to quit")
-    print("  Type /room <theme> to generate a new room")
-    print("  Type /combat <situation> to resolve combat structurally")
+    print("  Dungeons and Dragons AI Dungeon Master")
+    print("  Type /exit to quit at any time")
     print("=" * 60)
 
     server_params = StdioServerParameters(command=sys.executable, args=["-c", """
